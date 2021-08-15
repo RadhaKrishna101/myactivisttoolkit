@@ -1,0 +1,272 @@
+/************************************************/
+/************* UNIVERSAL ELEMENTS ***************/
+/************************************************/
+
+/* TODO: Customize your font properties and background color for all elements inside the <body> and <html> tags */
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body,
+html {
+  height: 100%;
+  font-size: 20px;                     /* Change the font size*/
+  font-family: "Roboto", sans-serif;   /* Change the font */
+  line-height: 1.5em;                  /* Change the line height size*/
+  margin: 0em;
+  color: white;                        /* Change the font color*/
+  background-color:#cc99ff;           /* Change the background color */
+  box-sizing: border-box;
+}
+
+h1 {
+  letter-spacing: 5px;
+  font-size: 50px;
+  /*TODO: Change the font-family property to your linked font*/
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  color:#6600cc;
+  text-align: center;
+	padding-bottom: 10px;
+  text-shadow: 2px 2px white;
+}
+
+/*TODO: Change the font-family property to your linked font*/
+h2 {
+  letter-spacing: 3px;
+  font-size: 25px;
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  color: #6600cc;
+  text-align: center;
+  line-height: 1.3em;
+  text-shadow: 2px 2px white;
+}
+
+/* STYLE NAV BAR--------------------------------------*/
+ul{
+	list-style-type: none;
+	background-color: #cc99ff;
+	overflow: hidden;
+	padding: 1em;
+}
+li{
+	display: inline;
+}
+li a{
+	text-decoration: none;
+	color: white;
+	font-size: 1.3em;
+	padding: 1em;
+	font-family: "Courier New", serif;
+	letter-spacing: 0px;
+  text-shadow: 2px 2px #6600cc;
+}
+li a:hover{
+	background-color:#a64dff;
+}
+
+.important{
+	color: white;
+	background-color: transparent;
+	font-size: 65px;
+	padding: 1.5em;
+	text-align: center;
+}
+
+.flex-container {
+  display: flex;             /* Set the flexbox display */
+  flex-direction: row;       /* Configure the flex items to row */
+  /*flex-wrap: nowrap;         /* Don’t wrap the flex items - comment this whole line out once you add media rules*/
+  justify-content: center;   /* Justify the flex items to the center */
+  align-items: center;       /* Align the flex items to the center */
+
+  background-color: #d9b3ff;
+  padding: 10px;
+  
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 50%;
+
+}
+
+/* TODO: Add the CSS properties to the flex item for the heading (the left box) */
+.heading-home {
+  padding: 4%;
+  margin: 2%;
+  color:#cc99ff;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 10px;
+  line-height: 60px;
+  border: solid white 3px;
+	padding-bottom: 1em;
+}
+
+.text-section {
+  background-color: #cc99ff;
+  padding: 20px 45px;
+  margin: 35px;
+  text-align: center;
+}
+
+
+/* TODO: Add the CSS selector for each image to the collective image rule set */
+.helpimg{
+	border-radius: 5%;
+	max-width: 20%;
+	border: 3px solid white;
+	margin-left: 10%;
+}
+
+.main-message,
+.image-one,
+.image-one2,
+.image-two2,
+.image-three2{
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #6600cc;
+  background-size: cover;
+  min-height: 100%; /*Adjust the gap between sections*/
+
+  /*Creates the scrolling effect*/
+  background-attachment: fixed;
+}
+.image-one{
+	min-height: 80%;
+}
+.main-message{
+	min-height: 25%;
+}
+
+
+.main-message {
+  background-image: url("https://cdn.pixabay.com/photo/2015/11/20/20/44/coral-1053834_960_720.jpg");
+}
+
+.image-one {
+  background-image: url("https://images.unsplash.com/photo-1596414086775-3e321ab08f36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=754&q=80");
+}
+
+
+.image-one2 {
+  background-image: url("https://cdn.pixabay.com/photo/2019/10/19/22/33/industry-4562396_960_720.jpg");
+}
+
+.image-two2 {
+  background-image: url("https://cdn.pixabay.com/photo/2017/11/28/13/08/fishermen-2983615_960_720.jpg");
+}
+
+.image-three2 {
+  background-image: url("https://cdn.pixabay.com/photo/2015/07/27/18/50/life-863034_960_720.jpg");
+}
+
+/* IF THE SCREEN IS ~~700 OR LESS~~ IMPLEMENT THESE RULES */
+@media only screen and (max-width: 700px) {
+  .main-message,
+  .image-one,
+  .image-three,
+  .image-four {
+    background-attachment: scroll;
+  }
+
+  .flex-container {
+    flex-wrap: wrap;
+    top: 30%;
+  }
+}
+
+
+/* IF THE SCREEN IS ~~701 OR MORE~~ IMPLEMENT THESE RULES */
+@media only screen and (min-width: 701px) {
+  .flex-container {
+    flex-wrap: wrap;
+    left: 25%;
+    right: 25%;
+    top: 30%;
+  }
+}
+
+/* IF THE SCREEN IS ~~1250 OR MORE~~ IMPLEMENT THESE RULES */
+@media only screen and (min-width: 1250px) {
+  h3 {
+    font-size: 35px;
+  }
+
+  .main-message,
+  .image-one,
+  .image-one2,
+  .image-two2,
+  .image-three2{
+    background-attachment: fixed;
+  }
+
+  .main-message {
+    height: 50%;
+  }
+
+  .textSection {
+    margin: 1.5% 15%;
+    font-size: 20px;
+    line-height: 1.5em;
+    
+  }
+  
+  .flex-container {
+    flex-wrap: nowrap;
+    left: 25%;
+    right: 25%;
+    top: 50%;
+  }
+}
+
+/*Button to generate a fact about our isses*/
+button{
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 30px;
+	background-color: #6600cc;
+	color: white;
+	border: solid white;
+	border-width: 3px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding: 15px;
+}
+
+button:hover{
+	background-color:#a64dff;
+}
+
+#myText{
+	margin-left: 41%;
+	padding:5px;
+	font-size: 20px;
+	font-family: 'Courier New', Courier, monospace;
+	border: 3px;
+	border-color: #6600cc;
+}
+
+.scriptQues{
+	background-color: #6600cc;
+	border-style: solid white;
+	border-width: 3px;
+
+	padding: 15px;
+	padding-left: 25px;
+	padding-right: 25px;
+
+	margin-top: 30px;
+	margin-left: 35%;
+	margin-right:35%;
+
+	font-family:'Courier New', Courier, monospace;
+	font-size: 1.3em;
+	text-align: center;
+	line-height: 2em;
+	color: white;
+}
